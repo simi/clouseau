@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Josef Šimánek"]
   s.email       = ["retro@ballgag.cz"]
   s.homepage    = "https://github.com/simi/clouseau"
-  s.summary     = %q{Refinery CMS gem inspector}
-  s.description = %q{Refinery CMS gem finder}
+  s.summary     = %q{Refinery CMS gem and repositories inspector}
+  s.description = %q{Refinery CMS gem and repositories finder}
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test}/*`.split("\n")
