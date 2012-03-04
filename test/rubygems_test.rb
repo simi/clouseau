@@ -9,6 +9,6 @@ class TestRubygems < MiniTest::Unit::TestCase
   end
   
   def test_rubygems_refinery_gems_count
-    assert_equal @rubygems.gems.count, 30
+    assert_equal @rubygems.gems.count, 78
   end
 end
