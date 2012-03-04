@@ -16,6 +16,7 @@ module Clouseau
       end
     end
   
+    private
     def github_search_page_url_for_page(page_number)
       "http://github.com/api/v2/json/repos/search/refinerycms-?start_page=#{page_number}"
     end
