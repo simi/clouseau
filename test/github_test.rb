@@ -3,18 +3,9 @@ require 'helper'
 class TestGithub < MiniTest::Unit::TestCase
   
   def setup
-    klass = Class.new(Clouseau::Github) do
-      def fetch
-        page = 1
-        while(github_repositories = (JSON.parse(IO.read("test/api/github/#{page}.json"))["repositories"])).any?
-          github_repositories.each {|r| repositories << r}
-          page += 1
-        end      
-      end
-    end
-    @github = klass.new
+    stub_github_api
+    @github = Clouseau::Github.new
     @github.fetch
-    
   end
   
   def test_github_refinery_repos_count
