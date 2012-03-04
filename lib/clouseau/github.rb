@@ -11,7 +11,7 @@ module Clouseau
     def fetch
       page = 1
       while(github_repositories = (JSON.parse(open(github_search_page_url_for_page(page)).read)["repositories"])).any?
-        github_repositories.each {|r| repositories << r}
+        github_repositories.each {|r| @repositories << r}
         page += 1
       end
     end
